@@ -15,6 +15,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script>
+    if (new URLSearchParams(location.search).has('mockup')) document.documentElement.classList.add('mockup');
+  </script>
   <style>
     html,body{height:100%;overflow:hidden;background:#0d0d0f}
     body{display:flex;align-items:center;justify-content:center}
@@ -23,7 +26,7 @@
     .in{font-size:16px}
     .back-site{display:none}
 
-    /* CELULAR: tela cheia, usa a barra de status real do aparelho */
+    /* CELULAR: tela cheia */
     @media (max-width:599px){
       #app .sb{display:none}
       .app-shell .scr:not(.full){padding-top:calc(18px + env(safe-area-inset-top))}
@@ -32,7 +35,16 @@
       .app-shell .cbar{padding-bottom:calc(22px + env(safe-area-inset-bottom))}
     }
 
-    /* COMPUTADOR: moldura de celular centralizada */
+    /* DENTRO DO MOCKUP DA LANDING PAGE */
+    html.mockup,html.mockup body{background:#F4F5FA}
+    html.mockup .app-shell{height:100vh}
+    html.mockup #app .sb{display:flex}
+    html.mockup .app-shell .scr:not(.full){padding-top:56px}
+    html.mockup .app-shell .splash{padding-top:120px}
+    html.mockup .app-shell .bn{height:86px;padding-bottom:18px}
+    html.mockup .app-shell .cbar{padding-bottom:26px}
+
+    /* COMPUTADOR: moldura de celular */
     @media (min-width:600px){
       body{background:radial-gradient(circle at 50% 30%,#1b2a6b 0%,#0d0d0f 60%)}
       .app-shell{width:390px;height:min(820px,94dvh);border-radius:54px;padding:12px;background:#0d0d0f;box-shadow:0 0 0 2px #333,0 40px 80px rgba(31,75,242,.35)}
