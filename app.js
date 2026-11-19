@@ -18,7 +18,7 @@ const P = {
 const ic = (n, s = 22) => `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${P[n]}</svg>`;
 
 /* ---------- DADOS FIXOS ---------- */
-const CAT = { 'Alimentação': '#7A06D6', 'Compras': '#1F4BF2', 'Transporte': '#14B8C8', 'Lazer': '#FF6B8B', 'Assinaturas': '#F2B705', 'Outros': '#8A8FA8' };
+const CAT = { 'Alimentação': '#8102cf', 'Compras': '#3a4bf3', 'Transporte': '#14B8C8', 'Lazer': '#FF6B8B', 'Assinaturas': '#F2B705', 'Outros': '#8A8FA8' };
 const CATE = { 'Alimentação': '🍔', 'Compras': '🛍️', 'Transporte': '🚗', 'Lazer': '🎬', 'Assinaturas': '📱', 'Outros': '✨' };
 const APPS = { 'Instagram': '📸', 'TikTok': '🎵', 'Shopee': '🧡', 'Shein': '👗', 'Mercado Livre': '📦', 'iFood': '🍔' };
 const MESES = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];

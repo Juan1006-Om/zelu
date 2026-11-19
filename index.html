@@ -5,75 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>zelu — seu dinheiro merece zelu.</title>
   <meta name="description" content="zelu: app financeiro para a Geração Z com organização de gastos, metas e mecanismos de pausa contra compras por impulso.">
-  <meta name="theme-color" content="#7A06D6">
+  <meta name="theme-color" content="#3a4bf3">
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icon-192.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* ===== HERO ===== */
-    .hero2{position:relative;padding:90px 0 80px;overflow:hidden}
-    .hero2::before{content:'';position:absolute;width:760px;height:520px;left:30%;top:-80px;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(40,70,240,.35),transparent);pointer-events:none}
-    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;position:relative}
-    .hero-copy h1{font-size:clamp(44px,6.5vw,88px);line-height:1;font-weight:500;margin:28px 0 22px;letter-spacing:-2px}
-    .hero-copy h1 b{font-weight:900}
-    .hero-copy p{max-width:560px;color:#c9cad6;font-size:19px;margin:0 0 34px}
-    .hero-copy .ctas{justify-content:flex-start}
-    .hero-copy .hint{font-size:14px;color:#8f90a3;margin:18px 0 0}
-    .hero-copy .hint button{color:#8b7bff;font-weight:800;text-decoration:underline}
-
-    /* ===== IPHONE FLUTUANTE ===== */
-    .mock{position:relative;display:flex;justify-content:center;padding:20px 0}
-    .mock::before{content:'';position:absolute;width:520px;height:520px;top:50%;left:50%;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(122,6,214,.55),rgba(31,75,242,.25) 55%,transparent);filter:blur(10px);pointer-events:none}
-    .float{animation:flt 6s ease-in-out infinite;position:relative}
-    @keyframes flt{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-18px) rotate(1deg)}}
-    .iphone{position:relative;width:360px;height:760px;border-radius:62px;padding:12px;
-      background:linear-gradient(145deg,#4a4a52 0%,#16161a 35%,#0d0d10 65%,#3a3a42 100%);
-      box-shadow:inset 0 0 0 2px #6b6b74,inset 0 0 0 7px #0b0b0d,0 50px 100px rgba(31,75,242,.45),0 25px 50px rgba(0,0,0,.6)}
-    .iphone::before{content:'';position:absolute;right:-4px;top:200px;width:4px;height:96px;border-radius:0 3px 3px 0;background:#3a3a42}
-    .iphone::after{content:'';position:absolute;left:-4px;top:170px;width:4px;height:60px;border-radius:3px 0 0 3px;background:#3a3a42;box-shadow:0 80px 0 #3a3a42}
-    .screen{position:relative;width:100%;height:100%;border-radius:50px;overflow:hidden;background:#F4F5FA}
-    .screen #app{border-radius:0}
-    .island{position:absolute;top:11px;left:50%;transform:translateX(-50%);width:108px;height:31px;border-radius:20px;background:#000;z-index:40;pointer-events:none}
-    .homebar{position:absolute;bottom:7px;left:50%;transform:translateX(-50%);width:120px;height:5px;border-radius:9px;background:rgba(16,19,43,.35);z-index:40;pointer-events:none}
-
-    /* cards flutuantes */
-    .fb{position:absolute;z-index:4;display:flex;align-items:center;gap:10px;background:#fff;color:#10132B;padding:12px 16px;border-radius:18px;box-shadow:0 20px 40px rgba(0,0,0,.35);font-size:14px;line-height:1.25;animation:flt2 5s ease-in-out infinite;white-space:nowrap}
-    .fb span{font-size:24px}
-    .fb small{display:block;color:#6B6F86;font-weight:600}
-    .fb b{font-weight:900}
-    .fb.a{left:-40px;top:14%}
-    .fb.b{right:-44px;top:46%;animation-delay:-1.6s}
-    .fb.c{left:-24px;bottom:10%;animation-delay:-3.2s}
-    @keyframes flt2{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
-
-    /* ===== SEÇÃO INSTALAR ===== */
-    .proto2{grid-template-columns:1fr 1fr}
-    .inst{display:grid;gap:16px}
-    .inst div{background:#232323;border-radius:24px;padding:26px}
-    .inst h3{display:flex;gap:10px;align-items:center;margin-bottom:10px}
-    .inst ol{padding-left:20px;color:#cfd0dc;display:grid;gap:6px}
-
-    @media(max-width:900px){
-      .hero-grid{grid-template-columns:1fr}
-      .hero-copy{text-align:center}
-      .hero-copy p{margin:0 auto 34px}
-      .hero-copy .ctas{justify-content:center}
-      .fb.a{left:0}.fb.b{right:0}.fb.c{left:4%}
-    }
-    @media(max-width:420px){
-      .iphone{transform:scale(.86);transform-origin:top center;margin-bottom:-106px}
-      .fb{font-size:12px;padding:10px 12px}.fb span{font-size:20px}
-      .fb.b{display:none}
-    }
-  </style>
 </head>
-<body>
+<body class="lp">
 
 <header class="nav"><div class="wrap">
-  <a href="#" class="logo">zelu</a>
+  <a href="#" class="logo" aria-label="zelu"><span class="logo-mark"></span></a>
   <ul>
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#recursos">Recursos</a></li>
@@ -87,21 +30,35 @@
 <section class="hero2"><div class="wrap">
   <div class="hero-grid">
     <div class="hero-copy">
-      <span class="badge">↗ Para a Geração Z</span>
-      <h1>seu dinheiro<br>merece <b>zelu</b>.</h1>
+      <span class="badge">
+        <svg class="i" viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg>
+        Para a Geração Z
+      </span>
+      <h1>seu dinheiro<br>merece <span class="logo-hero" role="img" aria-label="zelu"></span>.</h1>
       <p>Organize seus gastos, acompanhe suas metas e ganhe uma pausa entre o impulso e a decisão de compra. Sem julgamentos, um passo de cada vez.</p>
       <div class="ctas">
-        <a href="app.html" class="btn">Experimentar o protótipo ↗</a>
+        <a href="app.html" class="btn">Experimentar o protótipo
+          <svg class="i" viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg>
+        </a>
         <a href="#sobre" class="btn gh">Conhecer a zelu</a>
       </div>
-      <p class="hint">👉 O app no celular é interativo, pode tocar e navegar. <button onclick="resetApp()">Ver desde o início</button></p>
+      <p class="hint">O app ao lado é interativo: toque e navegue. <button onclick="resetApp()">Ver desde o início</button></p>
     </div>
 
     <div class="mock">
       <div class="float">
-        <div class="fb a"><span>⏸️</span><div><b>Pausa ativa</b><small>3 apps com respiro</small></div></div>
-        <div class="fb b"><span>💜</span><div><b>R$ 120</b><small>economizados</small></div></div>
-        <div class="fb c"><span>✈️</span><div><b>Viagem 37%</b><small>meta em andamento</small></div></div>
+        <div class="fb a">
+          <span class="fb-ic"><svg class="i" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg></span>
+          <div><b>Pausa ativa</b><small>3 apps com respiro</small></div>
+        </div>
+        <div class="fb b">
+          <span class="fb-ic"><svg class="i" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
+          <div><b>R$ 120</b><small>economizados</small></div>
+        </div>
+        <div class="fb c">
+          <span class="fb-ic"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></span>
+          <div><b>Viagem 37%</b><small>meta em andamento</small></div>
+        </div>
         <div class="iphone">
           <div class="screen">
             <div class="island"></div>
@@ -124,7 +81,10 @@
 
 <!-- ===== SOBRE ===== -->
 <section id="sobre"><div class="wrap">
-  <div class="sh"><div class="arrow">↗</div><h2 class="t">Outros apps controlam.<br>A zelu <span class="gt">cuida</span>.</h2></div>
+  <div class="sh">
+    <div class="arrow"><svg class="i" viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></div>
+    <h2 class="t">Outros apps controlam.<br>A zelu <span class="gt">cuida</span>.</h2>
+  </div>
   <p class="lead">A zelu nasceu de uma pesquisa sobre o bem-estar financeiro e digital da Geração Z. Mais do que registrar quanto você gastou, ela ajuda a entender o porquê e cria um momento de reflexão antes da compra.</p>
   <div class="vs">
     <div><h3>Apps de controle</h3><p>Registram despesas, categorizam e geram relatórios. Mostram o que já aconteceu.</p></div>
@@ -133,22 +93,46 @@
 </div></section>
 
 <!-- ===== RECURSOS ===== -->
-<section id="recursos" class="dark2"><div class="wrap">
-  <div class="sh"><div class="arrow">↗</div><h2 class="t">Tudo o que a zelu faz por você</h2></div>
+<section id="recursos" class="suave"><div class="wrap">
+  <div class="sh">
+    <div class="arrow"><svg class="i" viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></div>
+    <h2 class="t">Tudo o que a zelu <span class="gt">faz por você</span></h2>
+  </div>
   <p class="lead">Ferramentas pensadas para dar clareza, sem complicar o que pode ser fácil de entender.</p>
   <div class="feats">
-    <div class="feat"><div class="e">⏸️</div><h3>Pausa antes de comprar</h3><p>Veja o impacto de uma compra no seu saldo e nas suas metas antes de decidir.</p></div>
-    <div class="feat"><div class="e">📊</div><h3>Gastos sem complicação</h3><p>Registre seus gastos e descubra para onde seu dinheiro está indo.</p></div>
-    <div class="feat"><div class="e">🎯</div><h3>Metas possíveis</h3><p>Transforme planos em metas e acompanhe cada pequeno passo.</p></div>
-    <div class="feat"><div class="e">💜</div><h3>Wishlist com espera</h3><p>Deixe a vontade esperar 7 dias. Se ela continuar, você compra com clareza.</p></div>
-    <div class="feat"><div class="e">🛡️</div><h3>Bloqueio gentil</h3><p>Uma pausa antes de abrir apps que despertam o impulso de compra.</p></div>
-    <div class="feat"><div class="e">💬</div><h3>Assistente zelu</h3><p>Tire dúvidas sobre seus gastos e metas com uma companhia do seu lado.</p></div>
+    <div class="feat">
+      <div class="e"><svg class="i" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg></div>
+      <h3>Pausa antes de comprar</h3><p>Veja o impacto de uma compra no seu saldo e nas suas metas antes de decidir.</p>
+    </div>
+    <div class="feat">
+      <div class="e"><svg class="i" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></div>
+      <h3>Gastos sem complicação</h3><p>Registre seus gastos e descubra para onde seu dinheiro está indo.</p>
+    </div>
+    <div class="feat">
+      <div class="e"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></div>
+      <h3>Metas possíveis</h3><p>Transforme planos em metas e acompanhe cada pequeno passo.</p>
+    </div>
+    <div class="feat">
+      <div class="e"><svg class="i" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg></div>
+      <h3>Wishlist com espera</h3><p>Deixe a vontade esperar 7 dias. Se ela continuar, você compra com clareza.</p>
+    </div>
+    <div class="feat">
+      <div class="e"><svg class="i" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <h3>Bloqueio gentil</h3><p>Uma pausa antes de abrir apps que despertam o impulso de compra.</p>
+    </div>
+    <div class="feat">
+      <div class="e"><svg class="i" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+      <h3>Assistente zelu</h3><p>Tire dúvidas sobre seus gastos e metas com uma companhia do seu lado.</p>
+    </div>
   </div>
 </div></section>
 
 <!-- ===== A PAUSA ===== -->
 <section id="pausa"><div class="wrap">
-  <div class="sh"><div class="arrow">↗</div><h2 class="t">Um respiro entre o <span class="gt">impulso</span> e a compra</h2></div>
+  <div class="sh">
+    <div class="arrow"><svg class="i" viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></div>
+    <h2 class="t">Um respiro entre o <span class="gt">impulso</span> e a compra</h2>
+  </div>
   <p class="lead">O mecanismo de pausa é o coração da zelu. Ele não proíbe nada: mostra caminhos e devolve a decisão para você.</p>
   <div class="steps">
     <div class="stp"><div class="n">1</div><h3>Bateu a vontade</h3><p>Viu algo nas redes e quer comprar? Abra a pausa e conte o que é e quanto custa.</p></div>
@@ -158,22 +142,27 @@
 </div></section>
 
 <!-- ===== PROTÓTIPO / INSTALAR ===== -->
-<section id="prototipo" class="dark2"><div class="wrap proto proto2">
+<section id="prototipo" class="degrade"><div class="wrap proto">
   <div>
-    <div class="sh"><div class="arrow">↗</div><h2 class="t">Leve a zelu no bolso</h2></div>
-    <p class="lead" style="margin-bottom:0">O protótipo funciona direto no navegador e pode ser instalado na tela inicial do celular, como um app de verdade. Nenhum dado é salvo.</p>
+    <div class="sh">
+      <div class="arrow claro"><svg class="i" viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></div>
+      <h2 class="t">Leve a zelu no bolso</h2>
+    </div>
+    <p class="lead">O protótipo funciona direto no navegador e pode ser instalado na tela inicial do celular, como um app de verdade. Nenhum dado é salvo.</p>
     <ul>
       <li>Responda o quiz e descubra seu perfil de consumo</li>
-      <li>Use a <b>Pausa</b> antes de uma compra</li>
+      <li>Use a Pausa antes de uma compra</li>
       <li>Registre gastos e guarde dinheiro nas metas</li>
       <li>Simule o bloqueio gentil de apps</li>
       <li>Converse com a assistente zelu</li>
     </ul>
-    <a href="app.html" class="btn">Abrir o app em tela cheia ↗</a>
+    <a href="app.html" class="btn claro">Abrir o app em tela cheia
+      <svg class="i" viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg>
+    </a>
   </div>
   <div class="inst">
     <div>
-      <h3>🍎 No iPhone</h3>
+      <h3><svg class="i" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M11 18h2"/></svg> No iPhone</h3>
       <ol>
         <li>Abra o app no <b>Safari</b></li>
         <li>Toque em <b>Compartilhar</b></li>
@@ -181,7 +170,7 @@
       </ol>
     </div>
     <div>
-      <h3>🤖 No Android</h3>
+      <h3><svg class="i" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M11 18h2"/></svg> No Android</h3>
       <ol>
         <li>Abra o app no <b>Chrome</b></li>
         <li>Toque no menu <b>⋮</b></li>
@@ -202,8 +191,11 @@
 
 <!-- ===== VALORES ===== -->
 <section style="padding-top:0"><div class="wrap">
-  <div class="sh"><div class="arrow">↗</div><h2 class="t">Nossos valores</h2></div>
-  <div class="vals" style="margin-top:30px">
+  <div class="sh">
+    <div class="arrow"><svg class="i" viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></div>
+    <h2 class="t">Nossos <span class="gt">valores</span></h2>
+  </div>
+  <div class="vals">
     <div class="val"><h4>ACESSIBILIDADE</h4><p>Falamos de dinheiro de forma simples, direta e acessível, sem complicar o que pode ser fácil de entender.</p></div>
     <div class="val"><h4>CONSCIÊNCIA</h4><p>Incentivamos que cada pessoa entenda seus hábitos e tome decisões alinhadas aos seus objetivos.</p></div>
     <div class="val"><h4>CUIDADO</h4><p>Acreditamos que cuidar é um processo. Valorizamos cada pequeno passo e transformamos mudanças de hoje em conquistas de amanhã.</p></div>
@@ -211,18 +203,19 @@
 </div></section>
 
 <!-- ===== CTA FINAL ===== -->
-<section class="cta dark2"><div class="wrap">
+<section class="cta suave"><div class="wrap">
   <h2 class="t">seu dinheiro merece <span class="gt">zelu</span>.</h2>
-  <p class="lead" style="margin:16px auto 30px">Menos impulso. Mais direção.</p>
-  <a href="app.html" class="btn">Testar agora ↗</a>
+  <p class="lead">Menos impulso. Mais direção.</p>
+  <a href="app.html" class="btn">Testar agora
+    <svg class="i" viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg>
+  </a>
 </div></section>
 
 <footer><div class="wrap">
-  <span><b style="color:#fff">zelu</b> © 2026 · TCC Design Gráfico — Belas Artes</span>
+  <span class="foot-logo"><span class="logo-mark sm"></span> © 2026 · TCC Design Gráfico — Belas Artes</span>
   <span>Equipe Cajula Le Maisa: Carolina Schiavon, Isabella Fogaça, Juliana Peres, Lais Pacheco, Lethycia Pedrosa e Marina Couto</span>
 </div></footer>
 
-<!-- App dentro do mockup: abre direto na tela inicial -->
 <script src="app.js"></script>
 <script>reset('home');</script>
 </body>
