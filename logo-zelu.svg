@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="660 255 665 315">
+  <!-- z (com os traços verticais) e e -->
+  <g fill="none" stroke="#111111" stroke-width="46" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M695 355H836L699 497H836"/>
+    <path d="M766 310V355M766 497V542"/>
+    <path d="M882 424H1026A72 72 0 1 0 1000 479"/>
+  </g>
+  <!-- l com o topo arredondado -->
+  <path fill="#111111" d="M1060 519V300A40 40 0 0 1 1100 260H1107V519Z"/>
+  <!-- u -->
+  <path fill="none" stroke="#111111" stroke-width="50" stroke-linecap="round" d="M1159 350V440A65 65 0 0 0 1289 440V352"/>
+</svg>
