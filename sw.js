@@ -1,4 +1,4 @@
-const CACHE = 'zelu-v1';
+const CACHE = 'zelu-v5';
 const ARQUIVOS = ['./', './index.html', './app.html', './style.css', './app.js', './manifest.json', './icon.svg', './icon-192.png', './icon-512.png'];
 
 self.addEventListener('install', e => {
@@ -23,4 +23,5 @@ self.addEventListener('fetch', e => {
       })
       .catch(() => caches.match(e.request))
   );
+
 });
