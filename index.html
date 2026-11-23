@@ -11,12 +11,13 @@
   <link rel="apple-touch-icon" href="icon-192.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="zelu.css?v=5">
+  <style>.i{width:1.15em;height:1.15em;fill:none;stroke:currentColor;stroke-width:2}</style>
 </head>
 <body class="lp">
 
 <header class="nav"><div class="wrap">
-  <a href="#" class="logo" aria-label="zelu"><span class="logo-mark"></span></a>
+  <a href="#" class="logo" aria-label="zelu"><span class="logo-mark"><span class="logo-txt">zelu</span></span></a>
   <ul>
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#recursos">Recursos</a></li>
@@ -34,7 +35,7 @@
         <svg class="i" viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg>
         Para a Geração Z
       </span>
-      <h1>seu dinheiro<br>merece <span class="logo-hero" role="img" aria-label="zelu"></span>.</h1>
+      <h1>seu dinheiro<br>merece <span class="logo-hero" role="img" aria-label="zelu"><span class="logo-txt">zelu</span></span>.</h1>
       <p>Organize seus gastos, acompanhe suas metas e ganhe uma pausa entre o impulso e a decisão de compra. Sem julgamentos, um passo de cada vez.</p>
       <div class="ctas">
         <a href="app.html" class="btn">Experimentar o protótipo
@@ -62,6 +63,7 @@
         <div class="iphone">
           <div class="screen">
             <div class="island"></div>
+            <img class="screen-fallback" src="app-home.png" alt="Tela inicial do app zelu">
             <div id="app"></div>
             <div class="homebar"></div>
           </div>
@@ -71,56 +73,54 @@
   </div>
 
   <div class="stats">
-    <div class="stat"><b class="gt">68%</b><span>dos jovens da Geração Z descobrem produtos pelas redes sociais</span></div>
-    <div class="stat"><b class="gt">60%</b><span>acabam comprando a partir dessas descobertas</span></div>
-    <div class="stat"><b class="gt">43%</b><span>sentem que os algoritmos aceleram sua jornada de compra</span></div>
+    <div class="stat glass"><b class="gt">68<small>%</small></b><span>dos jovens da Geração Z descobrem produtos pelas redes sociais</span></div>
+    <div class="stat glass"><b class="gt">60<small>%</small></b><span>acabam comprando a partir dessas descobertas</span></div>
+    <div class="stat glass"><b class="gt">43<small>%</small></b><span>sentem que os algoritmos aceleram sua jornada de compra</span></div>
   </div>
 </div></section>
 
-<div class="pattern"></div>
-
 <!-- ===== SOBRE ===== -->
-<section id="sobre"><div class="wrap">
+<section id="sobre" class="orbs"><div class="wrap">
   <div class="sh">
     <div class="arrow"><svg class="i" viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></div>
     <h2 class="t">Outros apps controlam.<br>A zelu <span class="gt">cuida</span>.</h2>
   </div>
   <p class="lead">A zelu nasceu de uma pesquisa sobre o bem-estar financeiro e digital da Geração Z. Mais do que registrar quanto você gastou, ela ajuda a entender o porquê e cria um momento de reflexão antes da compra.</p>
   <div class="vs">
-    <div><h3>Apps de controle</h3><p>Registram despesas, categorizam e geram relatórios. Mostram o que já aconteceu.</p></div>
+    <div class="glass"><h3>Apps de controle</h3><p>Registram despesas, categorizam e geram relatórios. Mostram o que já aconteceu.</p></div>
     <div><h3>zelu</h3><p>Trabalha o comportamento por trás do gasto: pausa, reflexão, metas possíveis e uma companhia que fala de dinheiro de um jeito simples.</p></div>
   </div>
 </div></section>
 
 <!-- ===== RECURSOS ===== -->
-<section id="recursos" class="suave"><div class="wrap">
+<section id="recursos" class="suave textura orbs"><div class="wrap">
   <div class="sh">
     <div class="arrow"><svg class="i" viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></div>
     <h2 class="t">Tudo o que a zelu <span class="gt">faz por você</span></h2>
   </div>
   <p class="lead">Ferramentas pensadas para dar clareza, sem complicar o que pode ser fácil de entender.</p>
   <div class="feats">
-    <div class="feat">
+    <div class="feat glass">
       <div class="e"><svg class="i" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg></div>
       <h3>Pausa antes de comprar</h3><p>Veja o impacto de uma compra no seu saldo e nas suas metas antes de decidir.</p>
     </div>
-    <div class="feat">
+    <div class="feat glass">
       <div class="e"><svg class="i" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></div>
       <h3>Gastos sem complicação</h3><p>Registre seus gastos e descubra para onde seu dinheiro está indo.</p>
     </div>
-    <div class="feat">
+    <div class="feat glass">
       <div class="e"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></div>
       <h3>Metas possíveis</h3><p>Transforme planos em metas e acompanhe cada pequeno passo.</p>
     </div>
-    <div class="feat">
+    <div class="feat glass">
       <div class="e"><svg class="i" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg></div>
       <h3>Wishlist com espera</h3><p>Deixe a vontade esperar 7 dias. Se ela continuar, você compra com clareza.</p>
     </div>
-    <div class="feat">
+    <div class="feat glass">
       <div class="e"><svg class="i" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
       <h3>Bloqueio gentil</h3><p>Uma pausa antes de abrir apps que despertam o impulso de compra.</p>
     </div>
-    <div class="feat">
+    <div class="feat glass">
       <div class="e"><svg class="i" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
       <h3>Assistente zelu</h3><p>Tire dúvidas sobre seus gastos e metas com uma companhia do seu lado.</p>
     </div>
@@ -128,16 +128,16 @@
 </div></section>
 
 <!-- ===== A PAUSA ===== -->
-<section id="pausa"><div class="wrap">
+<section id="pausa" class="orbs"><div class="wrap">
   <div class="sh">
     <div class="arrow"><svg class="i" viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></div>
     <h2 class="t">Um respiro entre o <span class="gt">impulso</span> e a compra</h2>
   </div>
   <p class="lead">O mecanismo de pausa é o coração da zelu. Ele não proíbe nada: mostra caminhos e devolve a decisão para você.</p>
   <div class="steps">
-    <div class="stp"><div class="n">1</div><h3>Bateu a vontade</h3><p>Viu algo nas redes e quer comprar? Abra a pausa e conte o que é e quanto custa.</p></div>
-    <div class="stp"><div class="n">2</div><h3>A zelu te dá clareza</h3><p>Você vê quanto aquilo pesa no saldo, nas metas e em horas de trabalho, e respira por alguns segundos.</p></div>
-    <div class="stp"><div class="n">3</div><h3>Você decide</h3><p>Esperar na wishlist, guardar o valor na meta ou comprar mesmo assim. Sem culpa.</p></div>
+    <div class="stp glass"><div class="n">1</div><h3>Bateu a vontade</h3><p>Viu algo nas redes e quer comprar? Abra a pausa e conte o que é e quanto custa.</p></div>
+    <div class="stp glass"><div class="n">2</div><h3>A zelu te dá clareza</h3><p>Você vê quanto aquilo pesa no saldo, nas metas e em horas de trabalho, e respira por alguns segundos.</p></div>
+    <div class="stp glass"><div class="n">3</div><h3>Você decide</h3><p>Esperar na wishlist, guardar o valor na meta ou comprar mesmo assim. Sem culpa.</p></div>
   </div>
 </div></section>
 
@@ -161,16 +161,16 @@
     </a>
   </div>
   <div class="inst">
-    <div>
-      <h3><svg class="i" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M11 18h2"/></svg> No iPhone</h3>
+    <div class="glass-escuro">
+      <h3>No iPhone</h3>
       <ol>
         <li>Abra o app no <b>Safari</b></li>
         <li>Toque em <b>Compartilhar</b></li>
         <li>Escolha <b>Adicionar à Tela de Início</b></li>
       </ol>
     </div>
-    <div>
-      <h3><svg class="i" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M11 18h2"/></svg> No Android</h3>
+    <div class="glass-escuro">
+      <h3>No Android</h3>
       <ol>
         <li>Abra o app no <b>Chrome</b></li>
         <li>Toque no menu <b>⋮</b></li>
@@ -190,21 +190,22 @@
 </div></section>
 
 <!-- ===== VALORES ===== -->
-<section style="padding-top:0"><div class="wrap">
+<section class="orbs" style="padding-top:0"><div class="wrap">
   <div class="sh">
     <div class="arrow"><svg class="i" viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></div>
     <h2 class="t">Nossos <span class="gt">valores</span></h2>
   </div>
   <div class="vals">
-    <div class="val"><h4>ACESSIBILIDADE</h4><p>Falamos de dinheiro de forma simples, direta e acessível, sem complicar o que pode ser fácil de entender.</p></div>
-    <div class="val"><h4>CONSCIÊNCIA</h4><p>Incentivamos que cada pessoa entenda seus hábitos e tome decisões alinhadas aos seus objetivos.</p></div>
-    <div class="val"><h4>CUIDADO</h4><p>Acreditamos que cuidar é um processo. Valorizamos cada pequeno passo e transformamos mudanças de hoje em conquistas de amanhã.</p></div>
+    <div class="val glass"><h4>ACESSIBILIDADE</h4><p>Falamos de dinheiro de forma simples, direta e acessível, sem complicar o que pode ser fácil de entender.</p></div>
+    <div class="val glass"><h4>CONSCIÊNCIA</h4><p>Incentivamos que cada pessoa entenda seus hábitos e tome decisões alinhadas aos seus objetivos.</p></div>
+    <div class="val glass"><h4>CUIDADO</h4><p>Acreditamos que cuidar é um processo. Valorizamos cada pequeno passo e transformamos mudanças de hoje em conquistas de amanhã.</p></div>
   </div>
 </div></section>
 
 <!-- ===== CTA FINAL ===== -->
-<section class="cta suave"><div class="wrap">
-  <h2 class="t">seu dinheiro merece <span class="gt">zelu</span>.</h2>
+<section class="cta suave textura orbs"><div class="wrap">
+  <span class="badge">Seja um dos primeiros a testar</span>
+  <h2 class="t">seu dinheiro merece <span class="logo-hero" role="img" aria-label="zelu"><span class="logo-txt">zelu</span></span>.</h2>
   <p class="lead">Menos impulso. Mais direção.</p>
   <a href="app.html" class="btn">Testar agora
     <svg class="i" viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg>
@@ -212,11 +213,22 @@
 </div></section>
 
 <footer><div class="wrap">
-  <span class="foot-logo"><span class="logo-mark sm"></span> © 2026 · TCC Design Gráfico — Belas Artes</span>
+  <span class="foot-logo"><span class="logo-mark sm"><span class="logo-txt">zelu</span></span> © 2026 · TCC Design Gráfico — Belas Artes</span>
   <span>Equipe Cajula Le Maisa: Carolina Schiavon, Isabella Fogaça, Juliana Peres, Lais Pacheco, Lethycia Pedrosa e Marina Couto</span>
 </div></footer>
 
-<script src="app.js"></script>
-<script>reset('home');</script>
+<script src="app.js?v=5"></script>
+<script>
+  (function () {
+    // App dentro do mockup; se não carregar, mostra a imagem app-home.png
+    var tela = document.querySelector('.screen');
+    try { reset('home'); } catch (e) { tela.classList.add('sem-app'); }
+
+    // Logo: só usa o SVG se o arquivo existir; senão fica o "zelu" em degradê
+    var img = new Image();
+    img.onload = function () { document.documentElement.classList.add('tem-logo'); };
+    img.src = 'logo-zelu.svg';
+  })();
+</script>
 </body>
 </html>
