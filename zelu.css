@@ -253,4 +253,41 @@ details p{margin-top:8px;color:var(--mut)}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:6px}
 .two .card{margin:0;text-align:center}
 .two b{font-size:19px;display:block}
+
+/* ===== TELA ESTÁTICA DO APP NO MOCKUP ===== */
+.ts{position:absolute;inset:0;background:#F4F5FA;color:#10132B;font-family:'Nunito',sans-serif;line-height:1.3;text-align:left;overflow:hidden;transition:filter .2s}
+.screen-link:hover .ts{filter:brightness(.97)}
+.ts-top{background:var(--grad);color:#fff;padding:16px 18px 18px;border-radius:0 0 28px 28px}
+.ts-sb{display:flex;justify-content:space-between;font-weight:800;font-size:13px;padding:0 10px;margin-bottom:16px}
+.ts-mes{display:inline-block;font-size:10px;font-weight:800;background:#fff;color:var(--azul);padding:2px 10px;border-radius:99px;margin-bottom:6px}
+.ts-row{display:flex;justify-content:space-between;align-items:center}
+.ts-ola{font-size:20px;font-weight:800}
+.ts-bell{width:32px;height:32px;border-radius:10px;background:rgba(255,255,255,.2);display:grid;place-items:center}
+.ts-lbl{display:block;font-size:12px;opacity:.85;margin-top:10px}
+.ts-saldo{display:block;font-size:30px;font-weight:900;margin:2px 0 10px}
+.ts-pills{display:flex;gap:6px;margin-bottom:14px}
+.ts-pills span{font-size:10.5px;font-weight:700;padding:5px 10px;border-radius:99px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35)}
+.ts-cards{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ts-cards div{padding:12px;border-radius:16px;background:linear-gradient(135deg,rgba(255,255,255,.34),rgba(255,255,255,.12));border:1px solid rgba(255,255,255,.5);box-shadow:inset 0 1px 0 rgba(255,255,255,.6)}
+.ts-cards small{display:block;font-size:11px;opacity:.92}
+.ts-cards b{font-size:28px;font-weight:900;line-height:1.1}
+.ts-body{padding:14px}
+.ts-card{background:#fff;border-radius:20px;padding:14px;box-shadow:0 2px 12px rgba(16,19,43,.06)}
+.ts-h{font-size:14px;font-weight:800}
+.ts-bolhas{position:relative;height:160px;margin:8px 0 6px}
+.ts-bolhas span{position:absolute;border-radius:50%;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;border:3px solid #fff}
+.ts-bolhas b{font-size:14px;font-weight:900}
+.ts-bolhas small{font-size:9px;opacity:.92}
+.ts-bolhas .b1{width:124px;height:124px;left:14px;top:4px;background:linear-gradient(45deg,#3a4bf3,#6a78ff)}
+.ts-bolhas .b2{width:98px;height:98px;left:146px;top:18px;background:linear-gradient(45deg,#2433c9,#3a4bf3)}
+.ts-bolhas .b3{width:66px;height:66px;left:106px;top:92px;background:linear-gradient(45deg,#8102cf,#a63ff2)}
+.ts-linha{display:flex;justify-content:space-between;font-size:12px;font-weight:700}
+.ts-linha span:last-child{color:var(--mut)}
+.ts-bar{height:6px;border-radius:99px;background:#E8E9F3;margin:5px 0 9px;overflow:hidden}
+.ts-bar i{display:block;height:100%;background:var(--grad);border-radius:99px}
+.ts-fab{position:absolute;right:16px;bottom:94px;width:46px;height:46px;border-radius:15px;background:var(--grad);color:#fff;display:grid;place-items:center;font-size:20px;box-shadow:0 8px 18px rgba(58,75,243,.35)}
+.ts-nav{position:absolute;left:0;right:0;bottom:0;height:80px;background:#fff;display:flex;justify-content:space-around;align-items:flex-start;padding-top:12px;box-shadow:0 -4px 16px rgba(16,19,43,.06)}
+.ts-nav span{display:flex;flex-direction:column;align-items:center;gap:3px;color:#A3A6B8;font-size:18px}
+.ts-nav small{font-size:10.5px;font-weight:700}
+.ts-nav .on{color:var(--azul)}
 /* ===== FIM DO ARQUIVO ===== */
