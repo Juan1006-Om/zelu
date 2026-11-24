@@ -7,26 +7,22 @@
   <meta name="theme-color" content="#3a4bf3">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="zelu">
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="icon-192.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="zelu.css?v=6">
-  <script>
-    if (new URLSearchParams(location.search).has('mockup')) document.documentElement.classList.add('mockup');
-  </script>
+  <link rel="stylesheet" href="zelu.css?v=10">
   <style>
     html,body{height:100%;overflow:hidden;background:#F4F5FA}
     body{display:flex;align-items:center;justify-content:center}
     .app-shell{width:100%;height:100dvh;position:relative}
     .app-shell #app{border-radius:0}
     .in{font-size:16px}
-    .back-site{display:none}
+    .back-site{position:fixed;z-index:60;display:inline-flex;align-items:center;gap:6px;left:12px;bottom:calc(96px + env(safe-area-inset-bottom));
+      padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.92);color:#3a4bf3;font:800 13px Nunito,sans-serif;
+      box-shadow:0 6px 18px rgba(16,19,43,.15)}
 
-    /* CELULAR: tela cheia */
     @media (max-width:599px){
       #app .sb{display:none}
       .app-shell .scr:not(.full){padding-top:calc(18px + env(safe-area-inset-top))}
@@ -35,16 +31,6 @@
       .app-shell .cbar{padding-bottom:calc(22px + env(safe-area-inset-bottom))}
     }
 
-    /* DENTRO DO MOCKUP DA LANDING PAGE */
-    html.mockup,html.mockup body{background:#F4F5FA}
-    html.mockup .app-shell{height:100vh}
-    html.mockup #app .sb{display:flex}
-    html.mockup .app-shell .scr:not(.full){padding-top:56px}
-    html.mockup .app-shell .splash{padding-top:120px}
-    html.mockup .app-shell .bn{height:86px;padding-bottom:18px}
-    html.mockup .app-shell .cbar{padding-bottom:26px}
-
-    /* COMPUTADOR: moldura de celular sobre fundo branco da marca */
     @media (min-width:600px){
       body{background:#ffffff}
       body::before,body::after{content:'';position:fixed;border-radius:50%;filter:blur(90px);pointer-events:none}
@@ -52,19 +38,20 @@
       body::after{width:560px;height:560px;right:-140px;bottom:-140px;background:rgba(129,2,207,.2)}
       .app-shell{width:390px;height:min(820px,94dvh);border-radius:54px;padding:12px;background:#0d0d0f;box-shadow:0 0 0 2px #333,0 40px 80px rgba(58,75,243,.3);z-index:1}
       .app-shell #app{border-radius:42px}
-      .back-site{display:inline-flex;position:fixed;top:24px;left:24px;color:#3a4bf3;font-weight:800;gap:8px;align-items:center;z-index:2}
-      .back-site:hover{color:#8102cf}
+      .back-site{top:24px;left:24px;bottom:auto}
     }
   </style>
 </head>
 <body>
-  <a href="index.html" class="back-site">← Voltar ao site</a>
+  <a href="./" class="back-site">← Voltar ao site</a>
   <div class="app-shell"><div id="app"></div></div>
 
-  <script src="app.js?v=6"></script>
+  <script src="app.js?v=10"></script>
   <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => navigator.serviceWorker.register('sw.js'));
+    if (typeof render !== 'function') {
+      document.getElementById('app').innerHTML =
+        '<div style="height:100%;display:flex;align-items:center;justify-content:center;padding:30px;text-align:center;font:600 14px Nunito,sans-serif;color:#5f6278">' +
+        'Não foi possível abrir o app.<br><br><small>O arquivo app.js não carregou.</small></div>';
     }
   </script>
 </body>
