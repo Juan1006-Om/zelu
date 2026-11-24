@@ -10,7 +10,7 @@
   <link rel="icon" href="icon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="zelu.css?v=10">
+  <link rel="stylesheet" href="zelu.css?v=11">
   <style>.i{width:1.15em;height:1.15em;fill:none;stroke:currentColor;stroke-width:2}</style>
 </head>
 <body>
@@ -36,7 +36,7 @@
         <a href="app.html" class="btn">Experimentar o protótipo <svg class="i" viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
         <a href="#sobre" class="btn gh">Conhecer a zelu</a>
       </div>
-      <p class="hint">O app ao lado é interativo: toque e navegue. <button onclick="resetApp()">Ver desde o início</button></p>
+      <p class="hint">O app ao lado é interativo: toque e navegue. <button onclick="if(typeof resetApp==='function')resetApp()">Ver desde o início</button></p>
     </div>
 
     <div class="mock">
@@ -56,6 +56,9 @@
         <div class="iphone">
           <div class="screen">
             <div class="island"></div>
+            <a href="app.html" class="screen-link" aria-label="Abrir o app">
+              <img src="app-home.png" alt="Tela inicial do app zelu" class="screen-img">
+            </a>
             <div id="app"></div>
             <div class="homebar"></div>
           </div>
@@ -150,43 +153,4 @@
 
 <section class="orbs" style="padding-top:0"><div class="wrap">
   <div class="sh">
-    <div class="arrow"><svg class="i" viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></div>
-    <h2 class="t">Nossos <span class="gt">valores</span></h2>
-  </div>
-  <div class="vals">
-    <div class="val glass"><h4>ACESSIBILIDADE</h4><p>Falamos de dinheiro de forma simples, direta e acessível, sem complicar o que pode ser fácil de entender.</p></div>
-    <div class="val glass"><h4>CONSCIÊNCIA</h4><p>Incentivamos que cada pessoa entenda seus hábitos e tome decisões alinhadas aos seus objetivos.</p></div>
-    <div class="val glass"><h4>CUIDADO</h4><p>Acreditamos que cuidar é um processo. Valorizamos cada pequeno passo e transformamos mudanças de hoje em conquistas de amanhã.</p></div>
-  </div>
-</div></section>
-
-<section class="cta suave textura orbs"><div class="wrap">
-  <span class="badge">Seja um dos primeiros a testar</span>
-  <h2 class="t">seu dinheiro merece <span class="logo-hero" role="img" aria-label="zelu"><span class="logo-txt">zelu</span></span>.</h2>
-  <a href="app.html" class="btn" style="margin-top:28px">Testar agora <svg class="i" viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
-</div></section>
-
-<footer><div class="wrap">
-  <span class="foot-logo"><span class="logo-mark sm"><span class="logo-txt">zelu</span></span> © 2026 · TCC Design Gráfico — Belas Artes</span>
-  <span>Equipe Cajula Le Maisa: Carolina Schiavon, Isabella Fogaça, Juliana Peres, Lais Pacheco, Lethycia Pedrosa e Marina Couto</span>
-</div></footer>
-
-<script src="app.js?v=10"></script>
-<script>
-  (function () {
-    var tela = document.querySelector('.screen');
-    try {
-      if (typeof reset !== 'function') throw new Error('O arquivo app.js não carregou.');
-      reset('home');
-    } catch (e) {
-      tela.insertAdjacentHTML('beforeend',
-        '<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:30px;text-align:center;font:600 14px Nunito,sans-serif;color:#5f6278;z-index:30">' +
-        'Não foi possível abrir o app.<br><br><small>' + e.message + '</small></div>');
-    }
-    var img = new Image();
-    img.onload = function () { document.documentElement.classList.add('tem-logo'); };
-    img.src = 'logo-zelu.svg';
-  })();
-</script>
-</body>
-</html>
+    <div class="arrow"><svg class="i" viewBox="0 0 24 24"><path d="M7 17L17
