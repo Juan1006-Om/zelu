@@ -3,7 +3,6 @@ const $ = s => document.querySelector(s);
 const brl = v => v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
-/* ---------- ÍCONES ---------- */
 const P = {
   home: '<path d="M3 11l9-8 9 8v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/>',
   wallet: '<rect x="2" y="6" width="20" height="14" rx="3"/><path d="M16 14h2M2 10h20"/>',
@@ -17,7 +16,6 @@ const P = {
 };
 const ic = (n, s = 22) => `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${P[n]}</svg>`;
 
-/* ---------- DADOS FIXOS ---------- */
 const CAT = { 'Alimentação': '#8102cf', 'Compras': '#3a4bf3', 'Transporte': '#14B8C8', 'Lazer': '#FF6B8B', 'Assinaturas': '#F2B705', 'Outros': '#8A8FA8' };
 const CATE = { 'Alimentação': '🍔', 'Compras': '🛍️', 'Transporte': '🚗', 'Lazer': '🎬', 'Assinaturas': '📱', 'Outros': '✨' };
 const APPS = { 'Instagram': '📸', 'TikTok': '🎵', 'Shopee': '🧡', 'Shein': '👗', 'Mercado Livre': '📦', 'iFood': '🍔' };
@@ -53,7 +51,6 @@ const QA = [
 const REFL = ['Eu preciso disso ou só quero agora?', 'Eu compraria se não tivesse visto o anúncio?', 'Vou usar isso nos próximos 30 dias?'];
 const SUG = ['Como estão meus gastos?', 'Quanto falta pra minha meta?', 'Quero comprar uma coisa', 'Dicas pra economizar'];
 
-/* ---------- ESTADO (só em memória) ---------- */
 let S;
 function estadoInicial() {
   return {
@@ -99,21 +96,9 @@ let hist = [], cur = 'splash', timer = null, quizIdx = 0, quizAns = [], hideSald
 const F = { gCat: 'Alimentação', gPlan: 'sim', emo: '🎯' };
 const MAIN = ['home', 'carteira', 'metas', 'perfil'];
 
-/* ---------- HELPERS ---------- */
 const totalGastos = () => S.gastos.reduce((a, g) => a + g.v, 0);
 const porCat = () => S.gastos.reduce((o, g) => (o[g.c] = (o[g.c] || 0) + g.v, o), {});
 const pct = m => Math.min(100, Math.round(m.atual / m.alvo * 100));
 const head = (t, right = '', bf = 'back()') => `<div class="hd"><button class="ic" onclick="${bf}">${ic('back', 20)}</button><h2>${t}</h2>${right}</div>`;
 const gItem = g => `<div class="li"><span class="lic" style="background:${CAT[g.c]}22">${CATE[g.c]}</span><div class="f1"><b>${esc(g.d)}</b><p class="mut sm">${g.c} · dia ${g.dia}${g.plan ? '' : ' · não planejado'}</p></div><b>-${brl(g.v)}</b></div>`;
-const tgList = g => `<div class="card">${Object.keys(S[g]).map(k => `<div class="li"><div class="f1"><b>${k}</b></div><div class="toggle ${S[g][k] ? 'on' : ''}" onclick="tog(this,'${g}','${k}')"></div></div>`).join('')}</div>`;
-
-function toast(m) {
-  const t = document.createElement('div');
-  t.className = 'toast'; t.innerHTML = m;
-  $('#app').appendChild(t);
-  setTimeout(() => t.remove(), 2600);
-}
-function openSheet(h) {
-  closeSheet();
-  const d = document.createElement('div');
-  d.className =
+const tgList = g => `<div class="card">${Object.keys(S[g]).map(k => `<div class="li"><div class="f1"><b>${k}</b></div><div class="toggle ${S[g][k] ? 'on' : ''}" onclick="tog(this,'${g}','${k}')"></div></div>`).join('')}
